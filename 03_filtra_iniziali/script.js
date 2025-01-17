@@ -2,25 +2,26 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
-const arrayNomi = []
+
 // Dichiara la funzione qui.
 
 function estraiNomi( array, lettera){
 
+    const arrayNomi = [];
+
     
-    for ( let i = 0; i < array.lenght; i++){
-
-        if( array [i][0].toUpperCase() === lettera.toUpperCase()){
-
+    
+    for ( let i = 0; i < array.length; i++){
+        if( array[i][0].toUpperCase() === lettera.toUpperCase()){
             arrayNomi.push(array[i])
-        }
-            
+        }    
     }
+
+    return arrayNomi;
+
 }
 // Invoca la funzione qui e stampa il risultato in console
 
-estraiNomi(names , "L")
-
-console.log(arrayNomi)
+console.log(estraiNomi(names , "L"))
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
